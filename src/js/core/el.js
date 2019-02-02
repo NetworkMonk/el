@@ -102,13 +102,18 @@ var elHandlers = [];
             return obj;
         };
         obj.append = function(child) {
+            var i;
             if ((typeof(child) === 'object') && (child instanceof HTMLElement)) {
                 obj.element[0].append(child);
             } else if ((typeof(child) === 'object') && (typeof(child.element) === 'object') && (child.element instanceof HTMLElement)) {
                 obj.element[0].append(child.element);
             } else if ((typeof(child) === 'object') && (typeof(child.element) === 'object') && (Array.isArray(child.element))) {
-                for (var i = 0; i < child.element.length; i++) {
+                for (i = 0; i < child.element.length; i++) {
                     obj.append(child.element[i]);
+                }
+            } else if ((typeof(child) === 'object') && (Array.isArray(child))) {
+                for (i = 0; i < child.length; i++) {
+                    obj.append(child[i]);
                 }
             } else if (typeof(child) === 'string') {
                 obj.element[0].append(document.createTextNode(child));
