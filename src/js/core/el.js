@@ -18,10 +18,10 @@ var elHandlers = [];
             for (var i = 0; i < element.length; i++) {
                 result = result.concat(convertStringToElement(element[i]));
             }
-        } else if ((typeof(element) === 'string') && (element.indexOf('#') === 0)) {
+        } else if ((typeof(element) === 'string') && (element.indexOf('#') === 0) && (document.getElementById(element.replace('#', '')))) {
             // # is the first character, we can assume this is an ID string of an existing element
             result.push(document.getElementById(element.replace('#', '')));
-        } else if ((typeof(element) === 'string') && (element.indexOf('.') === 0)) {
+        } else if ((typeof(element) === 'string') && (element.indexOf('.') === 0) && (document.getElementsByClassName(element.replace('.', '')))) {
             // . is the first character, we can assume this is a class selector of an existing element
             result.push(document.getElementsByClassName(element.replace('.', '')));
         } else if (typeof(element) === 'string') {
@@ -207,5 +207,3 @@ var elHandlers = [];
         return createElement(param1);
     };
 }());
-
-exports.default = el;
