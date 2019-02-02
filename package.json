@@ -1,0 +1,16 @@
+{
+    "name": "el",
+    "version": "0.1.1",
+    "description": "Utility for shorthand easy creation and modification of collections of DOM elements that allows you to chain actions",
+    "author": "Central Computers (UK) Limited",
+    "devDependencies": {
+        "path": "latest",
+        "del": "latest",
+        "gulp": "latest",
+        "gulp-cli": "latest",
+        "gulp-uglify": "latest",
+        "gulp-uglifycss": "latest",
+        "gulp-concat": "latest",
+        "gulp-rename": "latest"
+    }
+}
