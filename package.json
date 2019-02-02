@@ -1,8 +1,13 @@
 {
-    "name": "el",
+    "name": "@networkmonkey/el",
     "version": "0.1.1",
     "description": "Utility for shorthand easy creation and modification of collections of DOM elements that allows you to chain actions",
     "author": "Central Computers (UK) Limited",
+    "homepage": "https://github.com/NetworkMonk/el",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/NetworkMonk/el"
+    },
     "devDependencies": {
         "path": "latest",
         "del": "latest",
