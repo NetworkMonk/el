@@ -1,0 +1,15 @@
+/* Slider transitions */
+.el-slide {
+    transition-property: height;
+}
+.el-slide.el-hidden {
+    height: 0;
+}
+
+/* Opacity transitions */
+.el-fade {
+    transition-property: opacity;
+}
+.el-fade.el-hidden {
+    opacity: 0;
+}
