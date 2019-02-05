@@ -149,6 +149,7 @@ var elHandlers = [];
                 action(obj.element[i]);
                 i++;
             }
+            return obj;
         };
         obj.add = function(element) {
             obj.element = obj.element.concat(convertStringToElement(element));
@@ -310,6 +311,7 @@ var elHandlers = [];
                     element.addEventListener(eventName, eventAction);
                 }
             });
+            return obj;
         };
         obj.removeEvent = function(eventName, eventAction) {
             obj.each(function(element) {
@@ -317,6 +319,7 @@ var elHandlers = [];
                     element.removeEventListener(eventName, eventAction);
                 }
             });
+            return obj;
         };
 
         var i = 0;
