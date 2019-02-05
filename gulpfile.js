@@ -32,5 +32,5 @@ function buildcss(cb) {
 }
 
 exports.clean = clean;
-exports.build = parallel(buildjs, buildcss);
+exports.build = parallel(buildjs);
 exports.default = exports.build;
