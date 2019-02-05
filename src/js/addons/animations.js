@@ -42,7 +42,11 @@
             }
             setTimeout(function() {
                 obj.css('transitionDuration', duration + 'ms').each(function(element) {
-                    element.style.maxHeight = element.dataset.slideHeight + 'px';
+                    if (element.dataset.slideHeight === 0) {
+                        el(element).slideDownComplete();
+                    } else {
+                        element.style.maxHeight = element.dataset.slideHeight + 'px';
+                    }
                 }).addEvent('transitionend', obj.slideDownComplete);
                 if ((typeof(includeFade) === 'boolean') && (includeFade === true)) {
                     obj.css('opacity', '1');
