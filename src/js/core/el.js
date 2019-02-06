@@ -324,8 +324,8 @@ var elHandlers = [];
         obj.data = function(name, val) {
             if (typeof(val) === 'undefined') {
                 if (obj.element.length > 0) {
-                    if (typeof(obj.element.dataset[name]) !== 'undefined') {
-                        return obj.element.dataset[name];
+                    if (typeof(obj.element[0].dataset[name]) !== 'undefined') {
+                        return obj.element[0].dataset[name];
                     }
                 }
                 return false;
