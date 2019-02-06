@@ -321,6 +321,9 @@ var elHandlers = [];
             });
             return obj;
         };
+        obj.data = function(name, val) {
+
+        };
 
         var i = 0;
         while (1) {
