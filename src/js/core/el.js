@@ -352,6 +352,12 @@ var elHandlers = [];
 
             return el(result);
         };
+        obj.remove = function() {
+            obj.each(function(element) {
+                element.parentNode.removeChild(element);
+            });
+            return obj;
+        };
 
         var i = 0;
         while (1) {
