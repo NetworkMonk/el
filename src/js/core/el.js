@@ -321,6 +321,20 @@ var elHandlers = [];
             });
             return obj;
         };
+        obj.data = function(name, val) {
+            if (typeof(val) === 'undefined') {
+                if (obj.element.length > 0) {
+                    if (typeof(obj.element[0].dataset[name]) !== 'undefined') {
+                        return obj.element[0].dataset[name];
+                    }
+                }
+                return false;
+            }
+            obj.each(function(element) {
+                element.dataset[name] = val;
+            });
+            return obj;
+        };
 
         var i = 0;
         while (1) {
