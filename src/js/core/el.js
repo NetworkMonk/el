@@ -335,6 +335,29 @@ var elHandlers = [];
             });
             return obj;
         };
+        obj.find = function(selector) {
+            var result = [];
+
+            obj.each(function(element) {
+                var matches = [];
+                try {
+                    matches = element.querySelectorAll(selector);
+                }
+                catch(err) {
+                }
+                if (matches.length > 0) {
+                    result = result.concat(Array.from(matches));
+                }    
+            });
+
+            return el(result);
+        };
+        obj.remove = function() {
+            obj.each(function(element) {
+                element.parentNode.removeChild(element);
+            });
+            return obj;
+        };
 
         var i = 0;
         while (1) {
