@@ -20,7 +20,8 @@ function buildjs(cb) {
     .pipe(concat('el.js'))
     .pipe(uglify())
     .pipe(rename({extname: '.min.js'}))
-    .pipe(dest('dist/' + package.version + '/'));
+    .pipe(dest('dist/' + package.version + '/'))
+    .pipe(dest('dist/'));
 }
 
 function buildcss(cb) {

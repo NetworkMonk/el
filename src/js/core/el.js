@@ -118,10 +118,15 @@ var elHandlers = [];
 
     function convertStringToElement(element) {
         var result = [];
+        var i=0;
         if ((typeof(element) === 'object') && (element instanceof HTMLElement)) {
             result.push(element);
         } else if ((typeof(element) === 'object') && (Array.isArray(element))) {
-            for (var i = 0; i < element.length; i++) {
+            for (i = 0; i < element.length; i++) {
+                result = result.concat(Array.from(convertStringToElement(element[i])));
+            }
+        } else if ((typeof(jQuery) !== 'undefined') && (element instanceof jQuery)) {
+            for (i = 0; i < element.length; i++) {
                 result = result.concat(Array.from(convertStringToElement(element[i])));
             }
         } else if (typeof(element) === 'string') {
