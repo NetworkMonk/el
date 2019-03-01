@@ -240,9 +240,9 @@ var elHandlers = [];
                 for (i = 0; i < child.element.length; i++) {
                     obj.append(child.element[i]);
                 }
-            } else if ((typeof(jQuery) !== 'undefined') && (child.element instanceof jQuery)) {
-                for (i = 0; i < child.element.length; i++) {
-                    obj.append(child.element[i]);
+            } else if ((typeof(jQuery) !== 'undefined') && (child instanceof jQuery)) {
+                for (i = 0; i < child.length; i++) {
+                    obj.append(child[i]);
                 }
             } else if ((typeof(child) === 'object') && (Array.isArray(child))) {
                 for (i = 0; i < child.length; i++) {
