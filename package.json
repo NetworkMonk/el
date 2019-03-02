@@ -17,5 +17,14 @@
         "gulp-uglifycss": "latest",
         "gulp-concat": "latest",
         "gulp-rename": "latest"
-    }
+    },
+    "keywords": [
+        "el",
+        "dom",
+        "page",
+        "manipulation",
+        "html",
+        "npm",
+        "package"
+    ]
 }
