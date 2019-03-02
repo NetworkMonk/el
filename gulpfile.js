@@ -20,16 +20,7 @@ function buildjs(cb) {
     .pipe(concat('el.js'))
     .pipe(uglify())
     .pipe(rename({extname: '.min.js'}))
-    .pipe(dest('dist/' + package.version + '/'))
     .pipe(dest('dist/'));
-}
-
-function buildcss(cb) {
-    return src('src/css/**/*.css')
-    .pipe(concat('el.css'))
-    .pipe(uglifycss())
-    .pipe(rename({extname: '.min.css'}))
-    .pipe(dest('dist/' + package.version + '/'));
 }
 
 exports.clean = clean;
