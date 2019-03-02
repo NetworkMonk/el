@@ -1,9 +1,7 @@
 /*jshint esversion: 6 */ 
 
-const package = require('./package.json');
-const {parallel, series, src, dest} = require('gulp');
+const {series, src, dest} = require('gulp');
 const uglify = require('gulp-uglify');
-const uglifycss = require('gulp-uglifycss');
 const rename = require('gulp-rename');
 const concat = require('gulp-concat');
 const del = require('del');
@@ -24,5 +22,5 @@ function buildjs(cb) {
 }
 
 exports.clean = clean;
-exports.build = parallel(buildjs);
+exports.build = series(clean, buildjs);
 exports.default = exports.build;
