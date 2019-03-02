@@ -12,9 +12,9 @@ function clean(cb) {
     });
 }
 
-function buildjs(cb) {
-    return src('src/js/core/**/*.js')
-    .pipe(src('src/js/addons/**/*.js'))
+function buildjs() {
+    return src('src/core/**/*.js')
+    .pipe(src('src/addons/**/*.js'))
     .pipe(concat('el.js'))
     .pipe(uglify())
     .pipe(rename({extname: '.min.js'}))

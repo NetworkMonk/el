@@ -1,6 +1,6 @@
 {
     "name": "@networkmonkey/el",
-    "version": "0.4.2",
+    "version": "0.4.3",
     "description": "Utility for shorthand easy creation and modification of collections of DOM elements that allows you to chain actions",
     "author": "Central Computers (UK) Limited",
     "homepage": "https://github.com/NetworkMonk/el",
@@ -9,14 +9,11 @@
         "url": "https://github.com/NetworkMonk/el"
     },
     "devDependencies": {
-        "path": "latest",
-        "del": "latest",
-        "gulp": "latest",
-        "gulp-cli": "latest",
-        "gulp-uglify": "latest",
-        "gulp-uglifycss": "latest",
-        "gulp-concat": "latest",
-        "gulp-rename": "latest"
+        "del": "^3.0.0",
+        "gulp": "^4.0.0",
+        "gulp-uglify": "^3.0.2",
+        "gulp-concat": "^2.6.1",
+        "gulp-rename": "^1.4.0"
     },
     "keywords": [
         "el",
