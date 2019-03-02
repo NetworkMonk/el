@@ -1,9 +1,11 @@
 # el
 Utility for shorthand easy creation and modification of collections of DOM elements.
 
+![GitHub](https://img.shields.io/github/license/NetworkMonk/el.svg)
 ![npm (scoped)](https://img.shields.io/npm/v/@networkmonkey/el.svg)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/@networkmonkey/el.svg)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/NetworkMonk/el.svg)
+![npm](https://img.shields.io/npm/dt/@networkmonkey/el.svg)
 
 ## Installation
 You can simply include the el.min.js in your project to give you access to el
