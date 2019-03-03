@@ -1,10 +1,12 @@
 # el
-Utility for shorthand easy creation and modification of collections of DOM elements.
+Lightweight utility for shorthand easy creation and modification of collections of DOM elements.
 
 ![GitHub](https://img.shields.io/github/license/NetworkMonk/el.svg)
 ![npm (scoped)](https://img.shields.io/npm/v/@networkmonkey/el.svg)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/NetworkMonk/el.svg)
 ![npm](https://img.shields.io/npm/dt/@networkmonkey/el.svg)
+
+Currently at 6kb, el performs the basic functionality as intended.
 
 ## Installation
 You can simply include the el.min.js in your project to give you access to el
@@ -24,6 +26,15 @@ You can use el to apply css styles to elements inline
 ```
 el('.my-class').css('color', '#444').css('fontSize', '1.5rem');
 ```
+
+One of the most exciting features of el, is that you can use it to setup and trigger PURE CSS transitions on elements dynamically.
+```
+el('.my-class').ani({opacity: 0}, 500, callback)
+```
+Will fade an element (or group of elements) to 0 opacity over 500ms, after the transition is completed the callback is callback.
+.stop() can be called to stop a transition at any time, elements will retain current mid transition properties.
+
+No per frame javascript is called during transition, this should be very lightweight.
 
 
 Set attribute values inline to multiple elements

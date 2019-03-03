@@ -314,10 +314,10 @@ var elHandlers = [];
             }
             return obj;
         };
-        obj.addEvent = function(eventName, eventAction) {
+        obj.addEvent = function(eventName, eventAction, options) {
             obj.each(function(element) {
                 if (typeof(element.addEventListener) === 'function') {
-                    element.addEventListener(eventName, eventAction);
+                    element.addEventListener(eventName, eventAction, options);
                 }
             });
             return obj;
