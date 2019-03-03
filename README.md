@@ -3,10 +3,10 @@ Lightweight utility for shorthand easy creation and modification of collections 
 
 ![GitHub](https://img.shields.io/github/license/NetworkMonk/el.svg)
 ![npm (scoped)](https://img.shields.io/npm/v/@networkmonkey/el.svg)
+![npm](https://img.shields.io/badge/minified%20size-5.96kB-blue.svg)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/NetworkMonk/el.svg)
 ![npm](https://img.shields.io/npm/dt/@networkmonkey/el.svg)
 
-Currently at 6kb, el performs the basic functionality as intended.
 
 ## Installation
 You can simply include the el.min.js in your project to give you access to el
