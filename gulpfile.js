@@ -14,7 +14,6 @@ function clean(cb) {
 
 function buildjs() {
     return src('src/core/**/*.js')
-    .pipe(src('src/addons/**/*.js'))
     .pipe(concat('el.js'))
     .pipe(uglify())
     .pipe(rename({extname: '.min.js'}))
