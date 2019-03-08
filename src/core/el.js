@@ -388,9 +388,6 @@ var el = false;
             return obj;
         };
         obj.ani = function(props, duration, cb) {
-            // Stop any current animations
-            obj.stop();
-
             var propList = [];
             for (var key in props) { 
                 if (!props.hasOwnProperty(key)) {
@@ -417,9 +414,8 @@ var el = false;
                 }
             });
 
-            obj.css('transationProperty', propList.join(','));
-
             obj.animationCallback = cb;
+            obj.css('transition-property', propList.join(','));
 
             setTimeout(function() {
                 obj.addEvent('transitionend', obj.animateComplete, {once: true});
@@ -453,6 +449,13 @@ var el = false;
                 obj.animationCallback(obj);
             }
             return obj;
+        };
+        obj.wait = function(duration, cb) {
+            setTimeout(function() {
+                if (typeof(cb) === 'function') {
+                    cb(obj);
+                }
+            }, duration);
         };
 
         return obj;
