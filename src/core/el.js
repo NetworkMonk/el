@@ -456,6 +456,7 @@ var el = false;
                     cb(obj);
                 }
             }, duration);
+            return obj;
         };
 
         return obj;

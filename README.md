@@ -3,7 +3,7 @@ Lightweight utility for shorthand easy creation and modification of collections 
 
 ![GitHub](https://img.shields.io/github/license/NetworkMonk/el.svg)
 ![npm (scoped)](https://img.shields.io/npm/v/@networkmonkey/el.svg)
-![npm](https://img.shields.io/badge/minified%20size-5.86%20kB-blue.svg)
+![npm](https://img.shields.io/badge/minified%20size-5.87%20kB-blue.svg)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/NetworkMonk/el.svg)
 ![npm](https://img.shields.io/npm/dt/@networkmonkey/el.svg)
 
